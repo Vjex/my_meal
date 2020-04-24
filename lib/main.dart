@@ -38,14 +38,19 @@ class MyApp extends StatelessWidget {
         Constants.CATEGORY_MEAL_ROUTE: (ctx) => CategoryMealsScreen(),
         Constants.SINLE_MEAL_DETAIL_ROUTE: (ctx) => MealDetail(),
       },
-      onGenerateRoute: (settings) {
-        //To add a
-        print(settings);
-        // if(settings.name == '/meal-detail'){
+      // onGenerateRoute: (settings) {
+      //   //To add a dyanmic route to the app
+      //   //print(settings);
+      //   // if(settings.name == '/meal-detail'){
 
-        // }else{
+      //   // }else{
 
-        // }
+      //   // }
+      //   return MaterialPageRoute(
+      //     builder: (ctx) => CategoriesScreen(),
+      //   );
+      // },
+      onUnknownRoute: (settings) {
         return MaterialPageRoute(
           builder: (ctx) => CategoriesScreen(),
         );
