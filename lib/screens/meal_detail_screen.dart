@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import '../Utils/dummy_data.dart';
 
 class MealDetailScreen extends StatelessWidget {
+  final Function toggleFavourateMeal;
+  final Function isMealInFavourate;
+
+  MealDetailScreen(this.toggleFavourateMeal, this.isMealInFavourate);
+
   Widget getSectionTitle(BuildContext context, String sectionTitle) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
@@ -95,11 +100,12 @@ class MealDetailScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(
-            Icons.delete,
+            isMealInFavourate(mealId) ? Icons.star : Icons.star_border,
           ),
           onPressed: () {
-            //Poping this page and passing the mealId to delete the meal Item from the list Partially.
-            Navigator.of(context).pop(mealId);
+            toggleFavourateMeal(mealId);
+            // //Poping this page and passing the mealId to delete the meal Item from the list Partially.
+            // Navigator.of(context).pop(mealId);
           }),
     );
   }

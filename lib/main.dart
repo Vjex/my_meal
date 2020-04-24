@@ -26,6 +26,8 @@ class _MyAppState extends State<MyApp> {
 
   List<Meal> _availableMeals = DUMMY_MEALS;
 
+  List<Meal> _favourateMeals = [];
+
   void _setFilters(Map<String, bool> filterData) {
     setState(() {
       _filters = filterData;
@@ -47,6 +49,28 @@ class _MyAppState extends State<MyApp> {
         return true;
       }).toList();
     });
+  }
+
+  void _toggleFavouateMeal(String mealId) {
+    //getting the the meal is present by getting its index otherwise it will return -1; if no match found;
+    final existingIndex =
+        _favourateMeals.indexWhere((meal) => meal.id == mealId);
+
+    if (existingIndex >= 0) {
+      setState(() {
+        _favourateMeals.removeAt(existingIndex);
+      });
+    } else {
+      setState(() {
+        _favourateMeals.add(
+          DUMMY_MEALS.firstWhere((meal) => meal.id == mealId),
+        );
+      });
+    }
+  }
+
+  bool _isMealInFavourate(String id) {
+    return _favourateMeals.any((meal) => meal.id == id);
   }
 
   @override
@@ -75,12 +99,18 @@ class _MyAppState extends State<MyApp> {
       // home: CategoriesScreen(),
       initialRoute: Constants.INITIAL_ROUTE,
       routes: {
-        Constants.INITIAL_ROUTE: (ctx) => TabsScreen(),
-        Constants.CATEGORY_MEAL_ROUTE: (ctx) =>
-            CategoryMealsScreen(_availableMeals),
-        Constants.SINLE_MEAL_DETAIL_ROUTE: (ctx) => MealDetailScreen(),
-        Constants.FILTERS_PAGE_ROUTE: (ctx) =>
-            FiltersScreen(_filters, _setFilters),
+        Constants.INITIAL_ROUTE: (ctx) => TabsScreen(_favourateMeals),
+        Constants.CATEGORY_MEAL_ROUTE: (ctx) => CategoryMealsScreen(
+              _availableMeals,
+            ),
+        Constants.SINLE_MEAL_DETAIL_ROUTE: (ctx) => MealDetailScreen(
+              _toggleFavouateMeal,
+              _isMealInFavourate,
+            ),
+        Constants.FILTERS_PAGE_ROUTE: (ctx) => FiltersScreen(
+              _filters,
+              _setFilters,
+            ),
       },
       // onGenerateRoute: (settings) {
       //   //To add a dyanmic route to the app
