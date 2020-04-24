@@ -1,13 +1,54 @@
 import 'package:flutter/material.dart';
 
-import './screens/meal_detail.dart';
+import './Utils/dummy_data.dart';
+import './models/meal.dart';
+import './screens/filters_screen.dart';
+import './screens/tabs_screen.dart';
+import './screens/meal_detail_screen.dart';
 import './Utils/constants.dart';
 import './screens/category_meals_screen.dart';
 import './screens/categories_screen.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Map<String, bool> _filters = {
+    'isGluttenFree': false,
+    'isLactoseFree': false,
+    'isVegan': false,
+    'isVegetarian': false,
+  };
+
+  List<Meal> _availableMeals = DUMMY_MEALS;
+
+  void _setFilters(Map<String, bool> filterData) {
+    setState(() {
+      _filters = filterData;
+
+      _availableMeals = DUMMY_MEALS.where((meal) {
+        if (_filters['isGluttenFree'] && !meal.isGluttenFree) {
+          return false;
+        }
+        if (_filters['isLactoseFree'] && !meal.isLactoseFree) {
+          return false;
+        }
+        if (_filters['isVegan'] && meal.isVegan) {
+          return false;
+        }
+        if (_filters['isVegetarian'] && meal.isVegetarian) {
+          return false;
+        }
+
+        return true;
+      }).toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,9 +75,12 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       initialRoute: Constants.INITIAL_ROUTE,
       routes: {
-        Constants.INITIAL_ROUTE: (ctx) => CategoriesScreen(),
-        Constants.CATEGORY_MEAL_ROUTE: (ctx) => CategoryMealsScreen(),
-        Constants.SINLE_MEAL_DETAIL_ROUTE: (ctx) => MealDetail(),
+        Constants.INITIAL_ROUTE: (ctx) => TabsScreen(),
+        Constants.CATEGORY_MEAL_ROUTE: (ctx) =>
+            CategoryMealsScreen(_availableMeals),
+        Constants.SINLE_MEAL_DETAIL_ROUTE: (ctx) => MealDetailScreen(),
+        Constants.FILTERS_PAGE_ROUTE: (ctx) =>
+            FiltersScreen(_filters, _setFilters),
       },
       // onGenerateRoute: (settings) {
       //   //To add a dyanmic route to the app

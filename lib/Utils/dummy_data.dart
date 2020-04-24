@@ -67,7 +67,7 @@ const DUMMY_MEALS = const [
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/52e4d5454b51ad14f1dc8460da2932761239d8ed525277_640.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -86,12 +86,12 @@ const DUMMY_MEALS = const [
         'Feel free to add some cheese to the finished Dish.'
       ],
       duration: 20,
-      isGluttenFree: false,
-      isLactoseFree: false,
-      isVegan: true,
-      isVegetarian: true),
+      isGluttenFree: true,
+      isLactoseFree: true,
+      isVegan: false,
+      isVegetarian: false),
   Meal(
-      id: 'm1',
+      id: 'm2',
       categories: [
         'c1',
         'c2',
@@ -101,7 +101,7 @@ const DUMMY_MEALS = const [
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -125,16 +125,16 @@ const DUMMY_MEALS = const [
       isVegan: true,
       isVegetarian: true),
   Meal(
-      id: 'm1',
+      id: 'm3',
       categories: [
         'c1',
         'c4',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Spaghetti without Tomato Sauce',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -153,18 +153,86 @@ const DUMMY_MEALS = const [
         'Feel free to add some cheese to the finished Dish.'
       ],
       duration: 20,
-      isGluttenFree: false,
+      isGluttenFree: true,
       isLactoseFree: false,
       isVegan: true,
-      isVegetarian: true),
+      isVegetarian: false),
   Meal(
-      id: 'm1',
+      id: 'm4',
       categories: [
         'c1',
         'c2',
         'c4',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Pizza',
+      complexity: Complexity.Simple,
+      affordability: Affordability.Affordable,
+      imageUrl:
+          'https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+      ingredients: [
+        '4 Tomatoes',
+        '1 Table Spoon of Olive Oil',
+        '1 Onion',
+        '250 Spaghetti',
+        'Spices',
+        'Cheese (optional)',
+      ],
+      steps: [
+        'Cut the tomamtoes and onion in small pieces',
+        'Boil Some Water - add some salt once it boils.',
+        'put the spaghetti into the boiling water - they should be done so for atleast 10 minutes',
+        'In the meanTime, Heaten up the Olive oil and add some chopped onion in the heaten oil.',
+        'After 2 minutes , add the tomato pieces , salt , peper and your boiled Spaghetti to it then after a minute',
+        'Add the sauce once the spaghetti are done',
+        'Feel free to add some cheese to the finished Dish.'
+      ],
+      duration: 20,
+      isGluttenFree: false,
+      isLactoseFree: true,
+      isVegan: false,
+      isVegetarian: true),
+  Meal(
+      id: 'm5',
+      categories: [
+        'c2',
+        'c3',
+        'c5',
+      ],
+      titile: 'Burger',
+      complexity: Complexity.Simple,
+      affordability: Affordability.Affordable,
+      imageUrl:
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
+      ingredients: [
+        '4 Tomatoes',
+        '1 Table Spoon of Olive Oil',
+        '1 Onion',
+        '250 Spaghetti',
+        'Spices',
+        'Cheese (optional)',
+      ],
+      steps: [
+        'Cut the tomamtoes and onion in small pieces',
+        'Boil Some Water - add some salt once it boils.',
+        'put the spaghetti into the boiling water - they should be done so for atleast 10 minutes',
+        'In the meanTime, Heaten up the Olive oil and add some chopped onion in the heaten oil.',
+        'After 2 minutes , add the tomato pieces , salt , peper and your boiled Spaghetti to it then after a minute',
+        'Add the sauce once the spaghetti are done',
+        'Feel free to add some cheese to the finished Dish.'
+      ],
+      duration: 20,
+      isGluttenFree: true,
+      isLactoseFree: true,
+      isVegan: true,
+      isVegetarian: true),
+  Meal(
+      id: 'm6',
+      categories: [
+        'c3',
+        'c4',
+        'c6',
+      ],
+      titile: 'Hamberger',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
@@ -192,17 +260,17 @@ const DUMMY_MEALS = const [
       isVegan: true,
       isVegetarian: true),
   Meal(
-      id: 'm1',
+      id: 'm7',
       categories: [
-        'c2',
+        'c1',
         'c3',
-        'c5',
+        'c7',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Momos',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -221,18 +289,54 @@ const DUMMY_MEALS = const [
         'Feel free to add some cheese to the finished Dish.'
       ],
       duration: 20,
-      isGluttenFree: false,
+      isGluttenFree: true,
       isLactoseFree: false,
-      isVegan: true,
+      isVegan: false,
+      isVegetarian: false),
+  Meal(
+      id: 'm8',
+      categories: [
+        'c1',
+        'c2',
+        'c4',
+        'c3',
+        'c5',
+      ],
+      titile: 'Salsa',
+      complexity: Complexity.Simple,
+      affordability: Affordability.Affordable,
+      imageUrl:
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
+      ingredients: [
+        '4 Tomatoes',
+        '1 Table Spoon of Olive Oil',
+        '1 Onion',
+        '250 Spaghetti',
+        'Spices',
+        'Cheese (optional)',
+      ],
+      steps: [
+        'Cut the tomamtoes and onion in small pieces',
+        'Boil Some Water - add some salt once it boils.',
+        'put the spaghetti into the boiling water - they should be done so for atleast 10 minutes',
+        'In the meanTime, Heaten up the Olive oil and add some chopped onion in the heaten oil.',
+        'After 2 minutes , add the tomato pieces , salt , peper and your boiled Spaghetti to it then after a minute',
+        'Add the sauce once the spaghetti are done',
+        'Feel free to add some cheese to the finished Dish.'
+      ],
+      duration: 20,
+      isGluttenFree: true,
+      isLactoseFree: false,
+      isVegan: false,
       isVegetarian: true),
   Meal(
-      id: 'm1',
+      id: 'm9',
       categories: [
-        'c3',
-        'c4',
         'c6',
+        'c9',
+        'c8',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Cahumin',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
@@ -256,125 +360,21 @@ const DUMMY_MEALS = const [
       ],
       duration: 20,
       isGluttenFree: false,
-      isLactoseFree: false,
-      isVegan: true,
+      isLactoseFree: true,
+      isVegan: false,
       isVegetarian: true),
   Meal(
-      id: 'm1',
-      categories: [
-        'c1',
-        'c3',
-        'c7',
-      ],
-      titile: 'Spaghetti with Tomato Sauce',
-      complexity: Complexity.Simple,
-      affordability: Affordability.Affordable,
-      imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
-      ingredients: [
-        '4 Tomatoes',
-        '1 Table Spoon of Olive Oil',
-        '1 Onion',
-        '250 Spaghetti',
-        'Spices',
-        'Cheese (optional)',
-      ],
-      steps: [
-        'Cut the tomamtoes and onion in small pieces',
-        'Boil Some Water - add some salt once it boils.',
-        'put the spaghetti into the boiling water - they should be done so for atleast 10 minutes',
-        'In the meanTime, Heaten up the Olive oil and add some chopped onion in the heaten oil.',
-        'After 2 minutes , add the tomato pieces , salt , peper and your boiled Spaghetti to it then after a minute',
-        'Add the sauce once the spaghetti are done',
-        'Feel free to add some cheese to the finished Dish.'
-      ],
-      duration: 20,
-      isGluttenFree: false,
-      isLactoseFree: false,
-      isVegan: true,
-      isVegetarian: true),
-  Meal(
-      id: 'm1',
-      categories: [
-        'c1',
-        'c2',
-        'c4',
-        'c3',
-        'c5',
-      ],
-      titile: 'Spaghetti with Tomato Sauce',
-      complexity: Complexity.Simple,
-      affordability: Affordability.Affordable,
-      imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
-      ingredients: [
-        '4 Tomatoes',
-        '1 Table Spoon of Olive Oil',
-        '1 Onion',
-        '250 Spaghetti',
-        'Spices',
-        'Cheese (optional)',
-      ],
-      steps: [
-        'Cut the tomamtoes and onion in small pieces',
-        'Boil Some Water - add some salt once it boils.',
-        'put the spaghetti into the boiling water - they should be done so for atleast 10 minutes',
-        'In the meanTime, Heaten up the Olive oil and add some chopped onion in the heaten oil.',
-        'After 2 minutes , add the tomato pieces , salt , peper and your boiled Spaghetti to it then after a minute',
-        'Add the sauce once the spaghetti are done',
-        'Feel free to add some cheese to the finished Dish.'
-      ],
-      duration: 20,
-      isGluttenFree: false,
-      isLactoseFree: false,
-      isVegan: true,
-      isVegetarian: true),
-  Meal(
-      id: 'm1',
-      categories: [
-        'c6',
-        'c9',
-        'c8',
-      ],
-      titile: 'Spaghetti with Tomato Sauce',
-      complexity: Complexity.Simple,
-      affordability: Affordability.Affordable,
-      imageUrl:
-          'https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
-      ingredients: [
-        '4 Tomatoes',
-        '1 Table Spoon of Olive Oil',
-        '1 Onion',
-        '250 Spaghetti',
-        'Spices',
-        'Cheese (optional)',
-      ],
-      steps: [
-        'Cut the tomamtoes and onion in small pieces',
-        'Boil Some Water - add some salt once it boils.',
-        'put the spaghetti into the boiling water - they should be done so for atleast 10 minutes',
-        'In the meanTime, Heaten up the Olive oil and add some chopped onion in the heaten oil.',
-        'After 2 minutes , add the tomato pieces , salt , peper and your boiled Spaghetti to it then after a minute',
-        'Add the sauce once the spaghetti are done',
-        'Feel free to add some cheese to the finished Dish.'
-      ],
-      duration: 20,
-      isGluttenFree: false,
-      isLactoseFree: false,
-      isVegan: true,
-      isVegetarian: true),
-  Meal(
-      id: 'm1',
+      id: 'm10',
       categories: [
         'c10',
         'c7',
         'c8',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Toast with Drink',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -394,20 +394,20 @@ const DUMMY_MEALS = const [
       ],
       duration: 20,
       isGluttenFree: false,
-      isLactoseFree: false,
-      isVegan: true,
-      isVegetarian: true),
+      isLactoseFree: true,
+      isVegan: false,
+      isVegetarian: false),
   Meal(
-      id: 'm1',
+      id: 'm11',
       categories: [
         'c7',
         'c8',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Chaat Paapdi',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -427,11 +427,11 @@ const DUMMY_MEALS = const [
       ],
       duration: 20,
       isGluttenFree: false,
-      isLactoseFree: false,
+      isLactoseFree: true,
       isVegan: true,
-      isVegetarian: true),
+      isVegetarian: false),
   Meal(
-      id: 'm1',
+      id: 'm12',
       categories: [
         'c9',
         'c10',
@@ -439,11 +439,11 @@ const DUMMY_MEALS = const [
         'c6',
         'c7',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Allo Tikki',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -463,11 +463,11 @@ const DUMMY_MEALS = const [
       ],
       duration: 20,
       isGluttenFree: false,
-      isLactoseFree: false,
+      isLactoseFree: true,
       isVegan: true,
       isVegetarian: true),
   Meal(
-      id: 'm1',
+      id: 'm13',
       categories: [
         'c3',
         'c5',
@@ -479,7 +479,7 @@ const DUMMY_MEALS = const [
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -498,22 +498,22 @@ const DUMMY_MEALS = const [
         'Feel free to add some cheese to the finished Dish.'
       ],
       duration: 20,
-      isGluttenFree: false,
+      isGluttenFree: true,
       isLactoseFree: false,
-      isVegan: true,
+      isVegan: false,
       isVegetarian: true),
   Meal(
-      id: 'm1',
+      id: 'm14',
       categories: [
         'c4',
         'c3',
         'c8',
       ],
-      titile: 'Spaghetti with Tomato Sauce',
+      titile: 'Samosa',
       complexity: Complexity.Simple,
       affordability: Affordability.Affordable,
       imageUrl:
-          'https://pixabay.com/get/57e3dc414855ae14f6d1867dda35367b1d38d8e35b527941_1920.jpg',
+          'https://www.efty.be/fondamental/wp-content/uploads/2015/08/Spag.jpg',
       ingredients: [
         '4 Tomatoes',
         '1 Table Spoon of Olive Oil',
@@ -532,7 +532,7 @@ const DUMMY_MEALS = const [
         'Feel free to add some cheese to the finished Dish.'
       ],
       duration: 20,
-      isGluttenFree: false,
+      isGluttenFree: true,
       isLactoseFree: false,
       isVegan: true,
       isVegetarian: true),
